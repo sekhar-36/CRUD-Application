@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'companycrudapp/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Records</title>
+</head>
+<body>
+{% block body_block %}
+<h3>Delete {{company.companyname}} ??</h3>
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" class="btn btn-danger" value="Delete Record">
+    <a href="/" class="btn btn-success">Cancel</a>
+</form>
+{% endblock %}
+
+</body>
+</html>

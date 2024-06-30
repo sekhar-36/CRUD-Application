@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'companycrudapp/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Details</title>
+</head>
+<body>
+{% block body_block %}
+<h3>About {{company.companyname|title}}</h3>
+<ul>
+    <li>Company Name : {{company.companyname | upper }}</li>
+    <li> CEO : {{company.ceo | title }}</li>
+    <li> Headquarters : {{company.headquarters | title }}</li>
+    <li>Founded : {{company.foundedyear}}</li>
+    <li>Type of Company : {{company.typeofcompany | title }}</li>
+    <li>Primary Industry : {{company.primaryindustry | title }}</li>
+</ul>
+<a href="/update/{{company.id}}" class='btn btn-warning'>Update</a>
+<a href="/delete/{{company.id}}" class='btn btn-warning'>Delete</a>
+
+
+{% endblock %}
+
+</body>
+</html>

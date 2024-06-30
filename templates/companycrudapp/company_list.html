@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'companycrudapp/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Companies</title>
+</head>
+<body>
+{% block body_block%}
+<h3>List of IT Companies in India </h3><hr>
+<ol>
+    {% for company in company_list %}
+    <li><a href="/{{company.id}}">{{company.companyname | title }}</a></li>
+    {% endfor %}
+</ol>
+{% endblock %}
+
+</body>
+</html>

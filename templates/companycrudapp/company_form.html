@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'companycrudapp/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Creation Form</title>
+</head>
+<body>
+{% block body_block %}
+<h3>Company Creation Form </h3><hr>
+<form method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" class="btn btn-primary btn-lg" value="Insert Record">
+     <input type="submit" class="btn btn-primary btn-lg" value="Cancel">
+</form>
+{% endblock %}
+</body>
+</html>
